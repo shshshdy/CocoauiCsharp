@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0-ios</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <SupportedOSPlatformVersion>11.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <CreatePackage>false</CreatePackage>
+    <CodesignProvision>syapptest</CodesignProvision>
+    <CodesignKey>Apple Development: shandong shao (WQF999VCK2)</CodesignKey>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <CreatePackage>false</CreatePackage>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CocoaUI\CocoaUI.csproj" />
+  </ItemGroup>
+</Project>

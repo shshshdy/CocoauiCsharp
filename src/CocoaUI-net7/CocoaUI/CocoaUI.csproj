@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0-ios</TargetFramework>
+    <RootNamespace>CocoaUI_net7</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="libcocoaui.linkwith.cs">
+      <DependentUpon>libcocoaui.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="libcocoaui.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="libcocoaui.a" />
+  </ItemGroup>
+</Project>
